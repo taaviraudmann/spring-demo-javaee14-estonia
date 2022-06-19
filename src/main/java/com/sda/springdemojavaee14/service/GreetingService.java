@@ -8,11 +8,10 @@ import org.springframework.stereotype.Service;
 // the same as private static final Logger log = LoggerFactory.getLogger(MyFirstRestController.class);
 public class GreetingService {
 
-
     public String makeSomeGreetingToUser(String name) {
         String result = "Welcome to Spring class" + name;
 
-        log.info(result)
+        log.info(result);
         return result;
     }
 }
