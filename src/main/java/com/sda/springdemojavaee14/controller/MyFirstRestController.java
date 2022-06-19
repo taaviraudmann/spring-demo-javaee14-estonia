@@ -15,6 +15,7 @@ public class MyFirstRestController {
 
     private final GreetingService greetingService;
 
+    //@Autowired  - it is optional. Use constructor
     // dependency injection = providing required collaborators/dependencies by Spring
     public MyFirstRestController(GreetingService greetingService) {
         this.greetingService = greetingService;
