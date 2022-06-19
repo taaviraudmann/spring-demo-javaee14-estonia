@@ -33,10 +33,18 @@ public class MyFirstRestController {
         return "Welcome to spring class!!!";
     }
 
+    //example query link from google:
+    //https://www.google.com/search?q=Estonia
+    //server: https://www.google.com
+    //search: application (endpoint) on the server
+    //?: query separator
+    //q= Estonia, q: parameter name, Estonia is value for q parameter
+    //& is used if more parameters are coming
+    // /greeting?name=Taavi&surname=Raudmann
     @GetMapping("/greeting")
-    public String greetUser(){
-        log.info("greetUser");
+    public String greetUser(String name, String surname){
+        log.info("greetUser called with params: name: [{}], surname:[{}]", name, surname); //String.format ("name: %s", name);
 
-        return greetingService.makeSomeGreetingToUser(" Taavi");
+        return greetingService.makeSomeGreetingToUser( name + " " + surname);
     }
 }
