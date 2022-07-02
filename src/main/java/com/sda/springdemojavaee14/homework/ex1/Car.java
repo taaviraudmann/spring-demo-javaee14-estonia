@@ -1,5 +1,8 @@
 package com.sda.springdemojavaee14.homework.ex1;
 
+import org.springframework.stereotype.Component;
+
+@Component //Component is bean - class managed by Spring
 public class Car {
     private final Engine engine;
 
