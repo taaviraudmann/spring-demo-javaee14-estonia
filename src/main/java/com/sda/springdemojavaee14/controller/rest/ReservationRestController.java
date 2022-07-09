@@ -9,7 +9,7 @@ import org.springframework.web.bind.annotation.RestController;
 import java.time.LocalDateTime;
 import java.util.List;
 
-@RestController
+@RestController //sole purpose of the controller is providing the result to the user
 @Slf4j
 @RequestMapping("/api")
 
