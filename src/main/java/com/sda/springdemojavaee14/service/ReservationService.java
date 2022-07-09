@@ -21,7 +21,7 @@ public class ReservationService {
     public List<Reservation> findAllReservations() {
         log.info("finding all reservations");
 
-        return reservationRepository.findAllReservationInRepository();
+        return reservationRepository.findAll();
     }
 }
 
