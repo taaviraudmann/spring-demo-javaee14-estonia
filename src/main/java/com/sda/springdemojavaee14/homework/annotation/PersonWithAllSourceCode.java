@@ -53,7 +53,7 @@ public class PersonWithAllSourceCode {
                 '}';
     }
 
-
+    // if you provide equals mewthod always add hashcode too
     @Override
     public boolean equals(Object o) {
         if (this == o) return true;
