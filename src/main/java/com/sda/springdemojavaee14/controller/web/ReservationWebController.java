@@ -29,11 +29,12 @@ public class ReservationWebController {
        return "reservations/reservation-details";
     }
 
-    @GetMapping("/reservqtions")
+
+    @GetMapping("/reservations")
     public String showAllReservations(Model data){
 
         var reservationsFromDB = reservationService.findAllReservations();
         data.addAttribute(RESERVATIONS_KEY, reservationsFromDB);
-        return "all-reservations";
+        return "reservations/all-reservations";
     }
 }
