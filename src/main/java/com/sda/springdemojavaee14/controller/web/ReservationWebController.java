@@ -10,7 +10,7 @@ import org.springframework.web.bind.annotation.RequestMapping;
 
 @Controller
 @Slf4j
-@RequestMapping("/web/reservations/")
+@RequestMapping("/web/reservations")
 
 public class ReservationWebController {
 
