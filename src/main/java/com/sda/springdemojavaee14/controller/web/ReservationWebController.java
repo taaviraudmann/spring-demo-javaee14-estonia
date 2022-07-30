@@ -10,7 +10,7 @@ import org.springframework.web.bind.annotation.RequestMapping;
 
 @Controller
 @Slf4j
-@RequestMapping("/web")
+@RequestMapping("/web/reservations/")
 
 public class ReservationWebController {
 
@@ -21,7 +21,7 @@ public class ReservationWebController {
     public ReservationWebController(ReservationService reservationService) {
         this.reservationService = reservationService;
     }
-    @GetMapping("/reservations/{id}")
+    @GetMapping("/{id}")
     public String showReservationById(@PathVariable ("id") Long id, Model data){
        var reservationFromDB = reservationService.findReservationById(id);
        data.addAttribute(ONE_RESERVATION_KEY, reservationFromDB);
@@ -30,7 +30,7 @@ public class ReservationWebController {
     }
 
 
-    @GetMapping("/reservations")
+    @GetMapping()
     public String showAllReservations(Model data){
 
         var reservationsFromDB = reservationService.findAllReservations();
